@@ -7,7 +7,7 @@
 https://www.python.org/downloads/
 
 ### Устанавливаем необходимое библиотеки
-Установка через файл requirements.txt
+Установка через файл requirements.txt (скачиваем его из репозитория)
 ```bash
 pip install -r requirements.txt
 ```
@@ -19,6 +19,8 @@ pip install Pillow==9.4.0
 ```
 
 ## Использование скрипта
+
+Скачиваем скрипт(convert_kaspi_pdf.py) из репозитория.
 
 Скрипт входными параметрами принимает:
 - url_pdf - ссылка на накладную каспия
