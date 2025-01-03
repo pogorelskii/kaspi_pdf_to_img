@@ -1,44 +1,45 @@
-# Конвертация накладной Каспия в отдельные изображения.
+# Converting Kaspi Invoice to Separate Images.
 
-## Подготовка
+## Preparation
 
-### Устанавливаем python
-Скачиваем 11 версию python с
-https://www.python.org/downloads/
+### Install Python
+Download Python version 11 from 
+https://www.python.org/downloads/.
 
-### Устанавливаем необходимое библиотеки
-Установка через файл requirements.txt (скачиваем его из репозитория)
+### Install necessary libraries
+Install using the requirements.txt file (download it from the repository):
 ```bash
 pip install -r requirements.txt
 ```
-или ставим кажду библиотеку отдельно
+Or install each library separately:
 ```bash
 pip install requests==2.28.2
 pip install pypdfium2==3.19.0
 pip install Pillow==9.4.0
 ```
 
-## Использование скрипта
+## Using the script
 
-Скачиваем скрипт(convert_kaspi_pdf.py) из репозитория.
+Download the script (convert_kaspi_pdf.py) from the repository.
 
-Скрипт входными параметрами принимает:
-- url_pdf - ссылка на накладную каспия
-- output_path - путь куда сохранить полученные изображения
+The script takes the following input parameters:
+- url_pdf - link to the Kaspi invoice
+- output_path - path where the resulting images should be saved
 
+Example command:
 ```bash
-python convert_kaspi_pdf.py -url_pdf 'ссылка_на_накладную_каспи' -output_path 'путь_куда_сложить_результат'
+python convert_kaspi_pdf.py -url_pdf 'kaspi_invoice_link' -output_path 'path_to_save_result'
 ```
 
-Результатом выполнения скрипта является сформированный список изображений (наклеек) полученных из PDF, сохраненный в переданную директорию.
-Наименование формируется по следующему принципу out_N.jpg, где N - порядковый номер (нумерация с нуля).
+The result of running the script is a generated list of images (stickers) obtained from the PDF, saved in the provided directory. 
+The naming convention for the images is as follows: out_N.jpg, where N is the index number (starting from zero).
 
-Пример использования:
+Example usage:
 
 ```bash
 python convert_kaspi_pdf.py -url_pdf https://kaspi.kz/medias/sys_master/documents/documents/ha2/ha6/68157055729694/W-238733297-KASPI-LOGISTIC.pdf -output_path C:/kaspi_img/
 ```
 
-Пример результата:
+Example result:
 
 <img src="https://github.com/pogorelskii/kaspi_pdf_to_img/blob/main/example/out_0.jpg?raw=true" width=35% height=35%>
